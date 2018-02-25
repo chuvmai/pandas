@@ -34,7 +34,7 @@ import datetime as dt
 import matplotlib.dates as mdates
 #%%
 
-data = pd.read_csv('../data/S&P 500 Monthly Data.csv')
+data = pd.read_csv('data/S&P 500 Monthly Data.csv')
 
 data.info()
 # non-null object
@@ -240,7 +240,7 @@ plt.figure()
 data.loc[(data.index >= start_date) & (data.index <= end_date),'Change %'].plot()
 #%%
 plt.figure()
-data['Change %'].plot.hist(bins = 100)
+data['Change %'].plot.hist(bins = 50, normalized = True)
 
 #%%
 plt.figure()
